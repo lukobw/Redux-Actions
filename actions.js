@@ -6,46 +6,34 @@ const REMOVE_COMMENT = 'REMOVE_COMMENT';
 const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 const THUMN_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-addComment((text) => {
-    return {
+const addComment = (text) => ({
         type: ADD_COMMENT,
         text,
         id: uuid.v4()
-    };
 });
 
-editComment ((text, id) => {
-    return {
+const editComment = (text, id) => ({
         type: EDIT_COMMENT,
         text,
-        id: id
-    };
+        id
 });
 
-removeComment((id) => {
-    return {
+const removeComment = (id) => ({
         type: REMOVE_COMMENT,
-        id: id
-    };
+        id
 });
 
-deleteComment((id) => {
-    return {
+const deleteComment = (id) => ({
         type: REMOVE_COMMENT,
-        id: id
-    };
+        id
 });
 
-thumbUpComment((id) => {
-    return {
+const thumbUpComment = (id) => ({
         type: THUMB_UP_COMMENT,
-        id: id
-    };
+        id
 });
 
-thumbDownComment((id) => {
-    return {
+const thumbDownComment = (id) => ({
         type: THUMN_DOWN_COMMENT,
-        id: id
-    };
+        id
 });
